@@ -34,11 +34,11 @@ def get_model() -> RandomForestClassifier:
 
 
 def main():
-    # Chiama la funzione importata da toolbox
+    
     X, y = build_train_dataset(TRAIN_FILE)
     model = get_model()
 
-    # Cross-Validation
+    
     skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=SEED)
     scores = []
     for tr, va in skf.split(X, y):
@@ -47,10 +47,10 @@ def main():
         scores.append(accuracy_score(y[va], preds))
     print(f"[CV] RF 5-fold accuracy: {np.mean(scores):.4f} ± {np.std(scores):.4f}")
 
-    # Training finale e Submission
+    
     model.fit(X, y)
 
-    # Chiama la funzione importata da toolbox
+    
     X_test, ids = build_test_dataset(TEST_FILE, train_cols=X.columns.tolist())
     preds = model.predict(X_test)
 
@@ -64,4 +64,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
