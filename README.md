@@ -8,16 +8,7 @@ Our final and best-performing model is **XGBoost**, with a public leaderboard sc
 
 ---
 
-## 📂 Repository Structure
 
-├── progetto_LOGREG.py          # Logistic Regression model
-├── progetto_RF.py              # Random Forest model
-├── progetto_XGB.py             # XGBoost final model
-├── submission_logreg.csv       # Logistic Regression predictions
-├── submission_rf.csv           # Random Forest predictions
-├── submission_xgb.csv          # XGBoost predictions (final)
-├── REPORT.pdf                  # 1-page final project report
-└── notebook.ipynb              # Kaggle notebook reproducing the submissions
 
 
 ---
