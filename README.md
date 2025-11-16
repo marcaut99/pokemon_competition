@@ -14,24 +14,13 @@ Our final and best-performing model is **XGBoost**, with a public leaderboard sc
 ---
 
 ## 🔍 Feature Engineering
+All three models rely on the same feature extraction pipeline, which is centralized in the toolbox.py module to guarantee consistency and reproducibility across all scripts.
 
-All three models rely on the same feature extraction pipeline, including:
+The features include:
 
-- **Static features**  
-  - Mean and total base stats of Player 1’s team  
-  - Opponent lead Pokémon stats  
-  - Relative stat differences (P1 – P2)
+Static features: Mean and total base stats of Player 1’s team, opponent lead Pokémon stats, and relative stat differences (P1 – P2).
 
-- **Dynamic timeline features (first 30 turns)**  
-  - HP trajectories and per-turn HP differences  
-  - Cumulative damage and recovery  
-  - First KO timing, KO counts  
-  - Early/mid/late game advantage windows  
-  - Move usage and mean base power  
-  - Status conditions inflicted  
-  - Per-turn HP differential for turns 1–8  
-
-These features are implemented identically in all scripts to guarantee reproducibility.
+Dynamic timeline features (first 30 turns): HP trajectories and per-turn HP differences, cumulative damage and recovery, First KO timing, KO counts, early/mid/late game advantage windows, move usage and mean base power, status conditions inflicted, and per-turn HP differential for turns 1–8.
 
 ---
 
